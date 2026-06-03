@@ -1,26 +1,144 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body{
+  background:#f5f5f5;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container{
+  width: 430px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1{
+  font-size:24px;
+  color:#4a4a4a;
+  margin-bottom:32px;
+  font-weight:700;
+}
+
+.input-area{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  margin-bottom:20px;
+}
+
+#todo-input{
+  flex:1;
+  border:none;
+  border-bottom:2px solid #bdbdbd;
+  background:transparent;
+  padding:10px 0;
+  font-size:17px;
+  outline:none;
+  color:#555;
+}
+
+#todo-input::placeholder{
+  color:#a5a5a5;
+}
+
+#add-btn{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:10px;
+  background:#666;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+#todo-list{
+  list-style:none;
+  max-height:370px;
+  overflow-y:auto;
+  padding-right:8px;
+}
+
+#todo-list::-webkit-scrollbar{
+  width:6px;
+}
+
+#todo-list::-webkit-scrollbar-thumb{
+  background:#cfcfcf;
+  border-radius:10px;
+}
+
+#todo-list li{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#fafafa;
+  border:2px solid #dddddd;
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:18px;
+}
+
+.left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex:1;
+}
+
+input[type="checkbox"]{
+  width:20px;
+  height:20px;
+  cursor:pointer;
+}
+
+.left span{
+  font-size:16px;
+  color:#555;
+  font-weight:600;
+}
+
+.completed{
+  text-decoration:line-through;
+  color:#b0b0b0 !important;
+}
+
+.edit-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:22px;
+    color:#555;
+    margin-right:12px;
+}
+
+.delete-btn{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:30px;
+  color:#555;
+}
+
+.bottom-text{
+  margin-top:25px;
+}
+
+.bottom-text h3{
+  color:#555;
+  font-size:18px;
+  font-style:italic;
+  margin-bottom:20px;
+}
+
+.bottom-text p{
+  color:#b5b5b5;
+  font-size:17px;
+  line-height:1.6;
+  font-style:italic;
 }
