@@ -147,9 +147,7 @@ export default function Home() {
         </h3>
 
         <p>
-          "Doing what you love is the
-          cornerstone of having abundance
-          in your life." - Wayne Dyer
+          "I trust and believe that eveything is always working out for my highest good"
         </p>
       </div>
     </div>
